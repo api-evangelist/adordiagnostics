@@ -1,0 +1,84 @@
+generated: '2026-09-07'
+method: derived
+source: >-
+  mcp/adordiagnostics-mcp-tools-list.json, llms/adordiagnostics-llms.txt,
+  well-known/adordiagnostics-well-known.yml, live probes of www.adordx.com
+note: >-
+  Derived from what was actually probed at adordx.com on 2026-09-07. ADOR Diagnostics publishes no
+  OpenAPI, AsyncAPI, GraphQL SDL, WSDL, protobuf or compliance program, so most cross-cutting
+  standards are recorded as non-conforming for absence of a surface, not as a failure. No Compliance
+  pointer is emitted: the company names no certification anywhere on its public site - the About and
+  Technology pages carry no CE-IVD, IVDR, ISO 13485 or FDA claim, and there is no trust center.
+domain_standard:
+  market: in-vitro diagnostics / laboratory medicine
+  candidates_checked:
+  - HL7 v2 (ORU/ORM lab result messaging)
+  - HL7 FHIR (DiagnosticReport / Observation)
+  - LOINC coding
+  - ASTM E1381/E1394 analyser-to-LIS
+  - IHE LAW (Laboratory Analytical Workflow)
+  conforms: false
+  evidence: >-
+    ADOR markets an "optional feature for connectivity between NATlab units located in various sites
+    and geographical mapping of test results", but publishes no interface specification, no LIS
+    integration guide and no message-format documentation for it. No HL7, FHIR, LOINC, ASTM or IHE
+    profile is named on any public page (www.adordx.com/technology, /syndromic-panels, /about all
+    fetched 200 and none names a standard). Reward-only dimension: absence is recorded, not
+    penalised.
+standards:
+- id: mcp
+  name: Model Context Protocol
+  conforms: true
+  evidence: >-
+    POST https://www.adordx.com/_api/mcp with a JSON-RPC 2.0 tools/list returned HTTP 200 and 9
+    tools, each carrying an inputSchema; tools/call GetBusinessDetails returned 200.
+- id: jsonrpc-2.0
+  name: JSON-RPC 2.0
+  conforms: true
+  evidence: The site MCP endpoint speaks JSON-RPC 2.0 over HTTP.
+- id: llms-txt
+  name: llms.txt
+  conforms: true
+  evidence: >-
+    https://www.adordx.com/llms.txt returns 200 text/plain with an H1, section headings and link
+    lists; saved verbatim to llms/adordiagnostics-llms.txt.
+- id: sitemaps-xml
+  name: sitemaps.org 0.9
+  conforms: true
+  evidence: https://www.adordx.com/sitemap.xml returns 200 with a valid sitemapindex (5 sitemaps).
+- id: rfc9116-security-txt
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 400 (HTML) on both hosts.
+- id: rfc8615-well-known
+  name: RFC 8615 well-known URIs
+  conforms: false
+  evidence: every /.well-known/* path returned 400 with an HTML body.
+- id: a2a-agent-card
+  name: A2A Agent Card
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json both returned 400 (HTML).
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: >-
+    /openapi.json and /swagger.json returned 400 (HTML), /api-docs returned 404, and no
+    api./docs./developer. subdomain resolves.
+- id: graphql
+  name: GraphQL
+  conforms: false
+  evidence: /graphql returned 404 on www.adordx.com.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: >-
+    no oauth-authorization-server metadata; MCP visitor tokens are minted anonymously via
+    GenerateVisitorToken.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returned 400.
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: no spec or error reference published.

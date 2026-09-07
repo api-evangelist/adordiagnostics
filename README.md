@@ -64,5 +64,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adordiagnostics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/adordiagnostics
+ADOR Diagnostics is an in-vitro diagnostics (IVD) company headquartered in Guidonia Montecelio, Italy, with operations in Israel and Cyprus. Its NATlab platform is a bench-top modular analyser plus a disposable microfluidic cartridge that runs fully automated, sample-to-answer syndromic multiplex molecular testing of crude clinical specimens in about 30-60 minutes, using isothermal rolling circle amplification (RCA) rather than PCR.
+
+ADOR manufactures instruments and assays, not software: it operates no developer program and publishes no public API, SDK, or machine-readable API contract. The only machine-readable surfaces on its own host are an `llms.txt` and the Wix-platform site MCP endpoint that `llms.txt` advertises, both captured verbatim in this repository.
+
+- Website: https://www.adordx.com/
+- llms.txt: https://www.adordx.com/llms.txt
+- Site MCP endpoint: https://www.adordx.com/_api/mcp
+- Secondary-market listing: https://equityzen.com/company/adordiagnostics

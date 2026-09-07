@@ -1,0 +1,25 @@
+generated: '2026-09-07'
+method: searched
+source: https://www.adordx.com/pricing-plans/list
+plan_count: 0
+note: >-
+  ADOR Diagnostics publishes no plans, list prices or commercial terms for the NATlab analyser,
+  its cartridges or the optional connectivity feature. The site's only pricing surface is
+  https://www.adordx.com/pricing-plans/list (HTTP 200), the stock Wix Pricing Plans page, which is
+  an UNEDITED TEMPLATE: three tiers named "Basic" (50 ILS/month), "Great Starting Point (SMBs)"
+  (100 ILS/month) and "Corporate" (150 ILS/month), every benefit line reading the Wix placeholder
+  "I'm a benefit". These are template defaults, not ADOR's prices, so they are recorded here as
+  evidence and plan_count is 0. No Pricing pointer is emitted in apis.yml - wiring the template
+  page would credit the company with published pricing it does not have. Commercial contact runs
+  through the contact form at https://www.adordx.com/contact and the inquiry page at
+  https://www.adordx.com/inquiry-services-page.
+plans: []
+x-evidence:
+  fetched: '2026-09-07'
+  urls:
+  - url: https://www.adordx.com/pricing-plans/list
+    status: 200
+    finding: unedited Wix Pricing Plans template, placeholder benefits and currency
+  - url: https://www.adordx.com/contact
+    status: 200
+    finding: contact form only; address Via Luigi Einaudi 7, 00012 Guidonia Montecelio, Italy

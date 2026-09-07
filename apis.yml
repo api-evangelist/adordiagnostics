@@ -1,18 +1,68 @@
 aid: adordiagnostics
-name: Adordiagnostics
-description: 'Adordiagnostics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: ADOR Diagnostics
+description: >-
+  ADOR Diagnostics is an in-vitro diagnostics (IVD) company developing syndromic multiplex
+  molecular diagnostics for infectious disease, headquartered in Guidonia Montecelio, Italy with
+  operations in Israel and Cyprus. Its NATlab platform pairs a bench-top modular analyser with a
+  disposable all-included microfluidic cartridge to run fully automated sample-to-answer testing of
+  crude clinical specimens in roughly 30-60 minutes, detecting up to 100 multiplexed targets per
+  sample. The assay chemistry is a patented isothermal rolling circle amplification (RCA) protocol
+  read by a proprietary carbon array sensor embedded in the cartridge, rather than PCR, and the
+  system is aimed at small and mid-sized laboratories, doctor offices, point-of-care and near-bed
+  testing, rural labs and mobile care units. The company markets an optional connectivity feature
+  linking NATlab units across sites for geographic mapping of results and outbreak detection, but
+  publishes no technical documentation for it. ADOR is a diagnostics instrument and assay
+  manufacturer, not a software vendor: it operates no developer program, publishes no public API,
+  SDK or machine-readable API contract, and the only machine-readable surfaces on its own host are
+  an llms.txt and the Wix-platform site MCP endpoint that llms.txt advertises.
+image: https://static.wixstatic.com/media/e0cc12_4becce2d37744839bc20a1ad38122632~mv2.png/v1/fill/w_324,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ADOR%20LOGO.png
 url: https://raw.githubusercontent.com/api-evangelist/adordiagnostics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: >-
+  ADOR sells diagnostic instruments and assay cartridges, not software services. No developer
+  portal, API reference, SDK or spec exists on any host it operates; the live agent surface at
+  adordx.com is the Wix site MCP endpoint over public marketing content.
 specificationVersion: '0.20'
 created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
-apis: []
+- Healthcare
+- Medical Devices
+- In Vitro Diagnostics
+- Molecular Diagnostics
+- Infectious Disease
+- Point of Care
+- Laboratory
+- Life Sciences
+- MCP
+apis:
+- name: ADOR Diagnostics Site MCP
+  description: >-
+    A live, unauthenticated Model Context Protocol endpoint served from the www.adordx.com host and
+    advertised in the company's own llms.txt. It is provided by the Wix site platform rather than
+    authored by ADOR Diagnostics, and exposes nine tools over the public marketing site - business
+    details, site search, site API-doc search, anonymous visitor-token minting, and generic Wix REST
+    call/execute tools. No tool exposes the NATlab analyser, its cartridges, assay results or any
+    ADOR diagnostic service; this is a site-content agent surface, not a product API.
+  humanURL: https://www.adordx.com/llms.txt
+  baseURL: https://www.adordx.com/_api/mcp
+  tags:
+  - MCP
+  - agent-access
+  - Site Content
+  properties:
+  - type: MCPServer
+    url: mcp/adordiagnostics-mcp.yml
+  - type: LLMsTxt
+    url: llms/adordiagnostics-llms.txt
+  - type: Authentication
+    url: authentication/adordiagnostics-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +70,61 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.adordx.com/
+- type: MCPServer
+  url: mcp/adordiagnostics-mcp.yml
+- type: LLMsTxt
+  url: llms/adordiagnostics-llms.txt
+- type: Authentication
+  url: authentication/adordiagnostics-authentication.yml
+- type: Conformance
+  url: conformance/adordiagnostics-conformance.yml
+- type: DomainSecurity
+  url: security/adordiagnostics-domain-security.yml
+- type: Plans
+  url: plans/adordiagnostics-plans-pricing.yml
+- type: About
+  url: https://www.adordx.com/about
+- type: Blog
+  url: https://www.adordx.com/news-and-events
+- type: Contact
+  url: https://www.adordx.com/contact
+- type: PrivacyPolicy
+  url: https://www.adordx.com/privacy-and-cookies-policy
+- type: TermsOfService
+  url: https://www.adordx.com/terms-and-conditions
+- type: LinkedIn
+  url: https://www.linkedin.com/company/ador-diagnostics/
+- type: SecondaryMarket
   url: https://equityzen.com/company/adordiagnostics
+x-enrichment:
+  date: '2026-09-07'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v3
+x-coverage:
+  state: covered
+  detail: >-
+    ADOR Diagnostics is an IVD instrument and assay manufacturer with no developer program - no
+    OpenAPI, GraphQL, WSDL, protobuf, SDK, sandbox or docs host, and no api./docs./developer.
+    subdomain resolves in DNS. What it does serve from its own host, and what was captured verbatim
+    here, is an llms.txt and the live unauthenticated Wix site MCP endpoint (9 tools, JSON-RPC 2.0)
+    that llms.txt advertises. Every /.well-known/* path returns the Wix router's 400 HTML, so no
+    WellKnown, SecurityTxt or AgentCard pointer is emitted. The site's Wix Pricing Plans page is an
+    unedited template, so no Pricing pointer is emitted either.
+  evidence:
+  - url: https://www.adordx.com/llms.txt
+    status: 200
+  - url: https://www.adordx.com/_api/mcp
+    status: 200
+  - url: https://www.adordx.com/openapi.json
+    status: 400
+  - url: https://www.adordx.com/graphql
+    status: 404
+  - url: https://www.adordx.com/.well-known/agent-card.json
+    status: 400
+  - url: https://www.adordx.com/.well-known/security.txt
+    status: 400
+  - url: https://www.adordx.com/pricing-plans/list
+    status: 200
+  checked: '2026-09-07'

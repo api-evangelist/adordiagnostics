@@ -1,0 +1,101 @@
+generated: '2026-09-07'
+method: probed
+source: live probes of every host this record knows
+note: >-
+  ADOR Diagnostics runs a Wix-hosted marketing site at adordx.com. Every /.well-known/* path on both
+  www.adordx.com and adordx.com returns HTTP 400 with an HTML body - the Wix router's response for
+  an unrouted path - so there is no discovery surface, no security.txt, no OIDC/OAuth metadata, no
+  api-catalog and no agent card. Recorded as an honest zero: no WellKnown or SecurityTxt pointer is
+  emitted in apis.yml, because nothing was served. No api./docs./developer./developers./status./
+  trust./portal./app./data./cloud./connect. subdomain resolves in DNS at all (NXDOMAIN).
+found:
+- path: /llms.txt
+  status: 200
+  content_type: text/plain
+  file: ../llms/adordiagnostics-llms.txt
+- path: /robots.txt
+  status: 200
+  content_type: text/plain
+- path: /sitemap.xml
+  status: 200
+  content_type: application/xml
+- path: /_api/mcp
+  status: 200
+  content_type: application/json
+  file: ../mcp/adordiagnostics-mcp-tools-list.json
+hosts:
+- host: https://www.adordx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    content_type: text/html
+  - path: /.well-known/openid-configuration
+    status: 400
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    content_type: text/html
+  - path: /.well-known/oauth-protected-resource
+    status: 400
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 400
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 400
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 400
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 400
+    content_type: text/html
+  - path: /.well-known/aauth-resource.json
+    status: 400
+    content_type: text/html
+- host: https://adordx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    content_type: text/html
+  - path: /.well-known/openid-configuration
+    status: 400
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    content_type: text/html
+  - path: /.well-known/oauth-protected-resource
+    status: 400
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 400
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 400
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 400
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 400
+    content_type: text/html
+  - path: /.well-known/aauth-resource.json
+    status: 400
+    content_type: text/html
+x-evidence:
+  fetched: '2026-09-07'
+  hosts_probed:
+  - www.adordx.com
+  - adordx.com
+  subdomains_unresolved:
+  - api.adordx.com
+  - docs.adordx.com
+  - developer.adordx.com
+  - developers.adordx.com
+  - status.adordx.com
+  - trust.adordx.com
+  - portal.adordx.com
+  - app.adordx.com
+  - data.adordx.com
+  - cloud.adordx.com
+  - connect.adordx.com
