@@ -63,6 +63,9 @@ apis:
     url: llms/adordiagnostics-llms.txt
   - type: Authentication
     url: authentication/adordiagnostics-authentication.yml
+  x-surface: platform-generated
+  x-platform: wix
+  x-platform-surface: site-mcp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
