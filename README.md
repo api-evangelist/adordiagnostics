@@ -1,4 +1,4 @@
-# Adordiagnostics
+# ADOR Diagnostics
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,11 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ADOR Diagnostics is an in-vitro diagnostics (IVD) company headquartered in Guidonia Montecelio, Italy, with operations in Israel and Cyprus. Its NATlab platform is a bench-top modular analyser plus a disposable microfluidic cartridge that runs fully automated, sample-to-answer syndromic multiplex molecular testing of crude clinical specimens in about 30-60 minutes, using isothermal rolling circle amplification (RCA) rather than PCR.
+ADOR Diagnostics is an in-vitro diagnostics (IVD) company developing syndromic multiplex molecular diagnostics for infectious disease, headquartered in Guidonia Montecelio, Italy with operations in Israel and Cyprus. Its NATlab platform pairs a bench-top modular analyser with a disposable all-included microfluidic cartridge to run fully automated sample-to-answer testing of crude clinical specimens in roughly 30-60 minutes, detecting up to 100 multiplexed targets per sample. The assay chemistry is a patented isothermal rolling circle amplification (RCA) protocol read by a proprietary carbon array sensor embedded in the cartridge, rather than PCR, and the system is aimed at small and mid-sized laboratories, doctor offices, point-of-care and near-bed testing, rural labs and mobile care units. The company markets an optional connectivity feature linking NATlab units across sites for geographic mapping of results and outbreak detection, but publishes no technical documentation for it. ADOR is a diagnostics instrument and assay manufacturer, not a software vendor: it operates no developer program, publishes no public API, SDK or machine-readable API contract, and the only machine-readable surfaces on its own host are an llms.txt and the Wix-platform site MCP endpoint that llms.txt advertises.
 
-ADOR manufactures instruments and assays, not software: it operates no developer program and publishes no public API, SDK, or machine-readable API contract. The only machine-readable surfaces on its own host are an `llms.txt` and the Wix-platform site MCP endpoint that `llms.txt` advertises, both captured verbatim in this repository.
+**Areas:** Company · Healthcare · Medical Devices · In Vitro Diagnostics · Molecular Diagnostics · Infectious Disease · Point of Care · Laboratory · Life Sciences · MCP
 
-- Website: https://www.adordx.com/
-- llms.txt: https://www.adordx.com/llms.txt
-- Site MCP endpoint: https://www.adordx.com/_api/mcp
-- Secondary-market listing: https://equityzen.com/company/adordiagnostics
+## ADOR Diagnostics on APIs.io
+
+Everything profiled for ADOR Diagnostics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/adordiagnostics/](https://apis.io/providers/adordiagnostics/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [ADOR Diagnostics Site MCP](https://apis.io/apis/adordiagnostics/ador-diagnostics-site-mcp/) — A live, unauthenticated Model Context Protocol endpoint served from the www.adordx.com host and advertised in the company's own llms.txt. It is provided by…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [adordiagnostics-site-mcp](https://apis.io/servers/adordiagnostics/adordiagnostics-site-mcp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Adordiagnostics Authentication](https://apis.io/security/adordiagnostics/adordiagnostics-authentication/)
+- [Adordiagnostics Domain Security](https://apis.io/security/adordiagnostics/adordiagnostics-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Adordiagnostics Plans Pricing](https://apis.io/plans/adordiagnostics/adordiagnostics-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.adordx.com/)
+- [Blog](https://www.adordx.com/news-and-events)
+- [Terms of service](https://www.adordx.com/terms-and-conditions)
+- [Privacy policy](https://www.adordx.com/privacy-and-cookies-policy)
+
+## API Evangelist rating
+
+**Kin Score 16.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 21.1 |
+
+**Agent readiness 4.7** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.5** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adordiagnostics/](https://apis.io/providers/adordiagnostics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ADOR Diagnostics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/adordiagnostics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
