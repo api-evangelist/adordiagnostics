@@ -90,14 +90,14 @@ Model Context Protocol servers that expose the API to agents.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Adordiagnostics Authentication](https://apis.io/security/adordiagnostics/adordiagnostics-authentication/)
-- [Adordiagnostics Domain Security](https://apis.io/security/adordiagnostics/adordiagnostics-domain-security/)
+- [ADOR Diagnostics Authentication](https://apis.io/security/adordiagnostics/adordiagnostics-authentication/)
+- [ADOR Diagnostics Domain Security](https://apis.io/security/adordiagnostics/adordiagnostics-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Adordiagnostics Plans Pricing](https://apis.io/plans/adordiagnostics/adordiagnostics-plans-pricing/)
+- [ADOR Diagnostics Plans Pricing](https://apis.io/plans/adordiagnostics/adordiagnostics-plans-pricing/)
 
 ## Where to find this API
 
@@ -110,7 +110,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 16.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 17.7** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
@@ -119,9 +119,9 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Contract governance | 4.5 |
 | Operational transparency | 0.0 |
 | Developer ergonomics | 14.3 |
-| Access clarity | 21.1 |
+| Access clarity | 31.9 |
 
-**Agent readiness 4.7** — human-only
+**Agent readiness 4.6** — human-only
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -144,8 +144,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 19.5** — Health
+**Regulatory alignment 14.8** — Health
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adordiagnostics/](https://apis.io/providers/adordiagnostics/).
 
